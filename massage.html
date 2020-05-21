@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {box-sizing:border-box}
+body {
+    font-family: "Lato", sans-serif;
+    transition: background-color .5s;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+#main {
+    transition: margin-left .5s;
+    padding: 16px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+.dropbtn {
+    background-color: #111;
+    color: #818181;
+    padding: 8px;
+    border: none;
+    cursor: pointer;
+	font-size:25px;
+	margin-left:25px;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+.dropdown-content {
+	background-color: #111;
+    color: #818181;
+    display: none;
+    position: absolute;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+	margin-left:50px;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+	color: #818181;
+}
+
+.dropdown-content a:hover {
+	background-color: #111;
+	 color: #f1f1f1;
+	}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+     background-color: #111;
+	 color: #f1f1f1;
+}
+</style>
+</head>
+<body>
+
+
+<div id="main">
+<div id="header">
+<img src="sb_logo.png" style="height:10%;weight:100%;"><br>
+</div>
+<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+<div id ="content" style="line-height:1">
+<div><img src="massage.jpg" alt="body massage" height="250px" width="1300px" style="margin-left:20px;margin-right:10px; border-radius:5px;"></div>
+
+<h3 style="color:Crimson;background-color:LightGrey; border-radius:5px;">Classic Body Massage</h3>
+<p>Let's help you relax with our Swedish Full Body Massage, simply known as a "Classic Massage".</p>
+<p>The is the best-known type of massage within the beauty industry, and one of the most de-stressing and relaxing treatments available.</p>
+<p>At Sole Beauty, our therapists are experts at offering a range of treatments  which include packages such as:</p>
+<ul>
+<li>10 minute 'Stress Buster Massage'</li>
+<li>30 minute back, neck & shoulder massage (or scalp)</li>
+<li>45 minute massage to include back, neck, shoulder, arms</li>
+<li>60 minute full body massage, that includes upper body plus legs</li>
+</ul>
+
+<p><i><b>A bit more about our Technique</b></i></p>
+
+<p>During a Swedish massage the masseuse will use soothing aromatherapy oils of your choice, to facilitate smooth, gliding strokes called effleurage as well as techniques including kneading, friction, stretching and tapping.</p>
+<p>The firm yet gentle pressure applied allows for relaxation and feel good indulgence. It importantly eases muscle tension and maintains physical, mental and emotional well being. Additionally massage is ideal for releasing tension and anxiety.</p>
+<p>If you feel you need a more intense and firmer massage, then the deep tissue massage we offer would be more effective.</p>
+<p>It is a more focused form of massage releasing chronic muscle tension or knots within the deeper tissue structures.</p>
+<p>So, if you're ready to relax and unwind..... Book an appointment with us now!</p>
+</div> 
+<div id="footer">
+</div>
+</div>
+
+</div>
+<div id="footer" class="title title-1" style="color:white;background-color:black;margin-bottom:16px; max-width: 3000px;">
+		<address style="margin-left:5%;">No : 123,<br>Passara road,<br> Badulla.<br>Tele : +94551234567<br>&nbsp &nbsp &nbsp &nbsp &nbsp +94559876544</address><br>
+		<span style="margin-left:5%;">&copy; Copyright 2017</span>
+		<span style="margin-left:65%;"><a href="http://www.facebook.com" target="_blank">
+		<img src="fb.png" style="width:10%;height:10%"></a>
+		<a href="http://www.twitter.com" target="_blank"><img src="twt.png" style="width:6%;height:6%;"></a>
+		</span>
+	</div>
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="hom_web.html">Home</a>
+<div class="dropdown">
+  <button class="dropbtn">Treatment</button>
+  <div class="dropdown-content">
+    <a href="massage.html">Body Massage</a>
+    <a href="nail_polish.html">Shellac Gel Manicure</a>
+    <a href="facial.html">Facial Treatment</a>
+	<a href="manicure.html">Manicure and Pedicure</a>
+	<a href="threading.html">Threading</a>
+	<a href="eyebrows.html">Lashes And Brows</a>
+</div>
+</div>
+<div class="dropdown">
+  <button class="dropbtn">Bridal Packages</button>
+  <div class="dropdown-content">
+    <a href="packagehome.html">Packages</a>
+    <a href="kandyan.html">Kandian</a>
+    <a href="western.html">Western</a>
+</div>
+</div>
+	<div class="dropdown">
+  <button class="dropbtn">Photo Gallery</button>
+  <div class="dropdown-content">
+    <a href="gal_1.html">Our Saloon</a>
+    <a href="inside_saloon.html">Bridal Dresses</a>
+    <a href="treatmentsphotos.html">Treatments</a>
+</div>
+</div>
+	<a href="shopping_page.html">Fashion Corner</a>
+	<a href="contact.html">Contact Us</a>
+	<a href="about.html">About Us</a>
+	<a href="priv.html">Privacy And Policy</a>
+</div>
+
+<script>
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+    document.getElementById("main").style.marginLeft = "250px";
+    document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("main").style.marginLeft= "0";
+    document.body.style.backgroundColor = "white";
+}
+</script>
+     
+</body>
+</html> 

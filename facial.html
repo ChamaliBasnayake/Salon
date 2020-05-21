@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {box-sizing:border-box}
+body {
+    font-family: "Lato", sans-serif;
+    transition: background-color .5s;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+#main {
+    transition: margin-left .5s;
+    padding: 16px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+.dropbtn {
+    background-color: #111;
+    color: #818181;
+    padding: 8px;
+    border: none;
+    cursor: pointer;
+	font-size:25px;
+	margin-left:25px;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+.dropdown-content {
+	background-color: #111;
+    color: #818181;
+    display: none;
+    position: absolute;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+	margin-left:50px;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+	color: #818181;
+}
+
+.dropdown-content a:hover {
+	background-color: #111;
+	 color: #f1f1f1;
+	}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+     background-color: #111;
+	 color: #f1f1f1;
+}
+</style>
+<link href="login.css" type="text/css" rel="stylesheet"/>
+</head>
+<body>
+
+
+<div id="main">
+<div id="header">
+<img src="sb_logo.png" style="height:10%;weight:100%;"><br>
+</div>
+<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+
+<div id ="content">
+<img src="facial.jpg" alt="facialmask" height="250px" width="1300px"  style="margin-left:20px;margin-right:10px; border-radius:5px;">
+
+
+
+
+<h3 style="color:Crimson;background-color:LightGrey; border-radius:5px;">Facial Treatments</h3>
+<h5 style="color:Crimson;">Mini Facial Tease (30min)</h5>
+<p>Minimum time, maximum results. Full use of power cleanses, exfoliation, facial pressure point massage. Mask and moisturizer.</p>
+<h5 style="color:Crimson;">Tranquility Facial (45 mins)</h5>
+<p>Relax whilst your skin is taken into a restful mode. A special soothing massage is given to stroke away upper body tension. Special facial performed based on client's specific skin needs and concerns.</p>
+<h5 style="color:Crimson;">SB Signature Facial (75min)</h5>
+<p>Our Signature Facial is an immaculate facial with extra added treats to include back, shoulder and foot massage. A focus treatment to revive face and body.</p>
+<h5 style="color:Crimson;">Decongestant Facial (60min)</h5>
+<p>For those clients who feel the need for a deep cleansing treatment. Excellent for combination/oily skin types. Includes extractions if needed.</p>
+<h5 style="color:Crimson;">Delicate (Look after me!) Facial (60min)</h5>
+<p>For clients who suffer from easily irritated skin- from harsh products to changing climates or even to touch itself-this treatment is calming and relaxing for the skin.</p>
+<h5 style="color:Crimson;">Desert Sweep (60min)</h5>
+<p>Recommended for clients who suffer with flakiness, dry patches or general lack of moisture. It removes and eliminates dead skin, restoring and bringing back radiance to the face.</p>
+<h5 style="color:Crimson;">Raindrop Rehydrating Facial (60min)</h5>
+<p>This facial is a must for all skin types; it helps push and promote hydration back into the skin to assist in the skin's natural balance and glow.</p>
+<h5 style="color:Crimson;">Microdermabrasion Treatment (45min)</h5>
+<p>This facial treatment gently removes the outermost layer of dead skin cells from the skin. It helps diminish the appearance of deeper scars and skin imperfections. Microdermabrasion treatment smoothes the skin and, in the process, removes small scars caused from acne, and treats uneven skin tone caused by scars, birthmarks, sun damage or age spots.</p>
+</div> 
+<h2>Appointment Form</h2>
+
+<button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Book</button>
+
+
+<div id="id01" class="modal">
+  
+  <form class="modal-content animate" action="/action_page.php">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+      
+    </div>
+
+    <div class="container">
+      <label><b>CustomerName</b></label>
+      <input type="text" placeholder="Enter Username" name="uname" required>
+
+       <label><b>Address</b></label>
+      <input type="text" placeholder="Enter Address" name="Address" required>
+	  
+	   <label><b>ContactNumber</b></label>
+      <input type="text" placeholder="ContactNumber" name="ContactNumber" required>
+	  
+	   <label><b>Date</b></label>
+      <input type="text" placeholder="Date" name="Date" required>
+	  
+        
+      <input type="submit" value="Book"/>
+	  <input type="reset" value="Clear"/>
+     
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+     
+    </div>
+  </form>
+</div>
+
+<script>
+var modal = document.getElementById('id01');
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+
+<div id="footer">
+</div>
+</div>
+
+</div>
+<div id="footer" class="title title-1" style="color:white;background-color:black;margin-bottom:16px; max-width: 3000px;">
+		<address style="margin-left:5%;">No : 123,<br>Passara road,<br> Badulla.<br>Tele : +94551234567<br>&nbsp &nbsp &nbsp &nbsp &nbsp +94559876544</address><br>
+		<span style="margin-left:5%;">&copy; Copyright 2017</span>
+		<span style="margin-left:65%;"><a href="http://www.facebook.com" target="_blank">
+		<img src="fb.png" style="width:10%;height:10%"></a>
+		<a href="http://www.twitter.com" target="_blank"><img src="twt.png" style="width:6%;height:6%;"></a>
+		</span>
+	</div>
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="hom_web.html">Home</a>
+<div class="dropdown">
+  <button class="dropbtn">Treatment</button>
+  <div class="dropdown-content">
+    <a href="massage.html">Body Massage</a>
+    <a href="nail_polish.html">Shellac Gel Manicure</a>
+    <a href="facial.html">Facial Treatment</a>
+	<a href="manicure.html">Manicure and Pedicure</a>
+	<a href="threading.html">Threading</a>
+	<a href="eyebrows.html">Lashes And Brows</a>
+</div>
+</div>
+<div class="dropdown">
+  <button class="dropbtn">Bridal Packages</button>
+  <div class="dropdown-content">
+    <a href="packagehome.html">Packages</a>
+    <a href="kandyan.html">Kandian</a>
+    <a href="western.html">Western</a>
+</div>
+</div>
+	<div class="dropdown">
+  <button class="dropbtn">Photo Gallery</button>
+  <div class="dropdown-content">
+    <a href="gal_1.html">Our Saloon</a>
+    <a href="inside_saloon.html">Bridal Dresses</a>
+    <a href="treatmentsphotos.html">Treatments</a>
+</div>
+</div>
+	<a href="shopping_page.html">Fashion Corner</a>
+	<a href="contact.html">Contact Us</a>
+	<a href="about.html">About Us</a>
+	<a href="priv.html">Privacy And Policy</a>
+</div>
+
+<script>
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+    document.getElementById("main").style.marginLeft = "250px";
+    document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("main").style.marginLeft= "0";
+    document.body.style.backgroundColor = "white";
+}
+</script>
+     
+</body>
+</html> 

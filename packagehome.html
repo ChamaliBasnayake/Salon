@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {box-sizing:border-box}
+body {font-family: Verdana,sans-serif;margin:0}
+.mySlides {display:none}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 900px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+body {
+    font-family: "Lato", sans-serif;
+    transition: background-color .5s;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+#main {
+    transition: margin-left .5s;
+    padding: 16px;
+	background-color:  	 	#DCDCDC;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+  
+	[class*="col-"] {
+			float: left;
+			padding: 10px;
+		}
+		.col-1 {width: 8.33%;}
+		.col-2 {width: 14.66%;}
+		.col-3 {width: 25%;}
+		.col-4 {width: 33.33%;}
+		.col-5 {width: 41.66%;}
+		.col-6 {width: 50%;}
+		.col-7 {width: 58.33%;}
+		.col-8 {width: 66.66%;}
+		.col-9 {width: 75%;}
+		.col-10 {width: 83.33%;}
+		.col-11 {width: 91.66%;}
+		.col-12 {width: 98%;}
+		
+		@media only screen and (max-width: 500px) {
+			[class*="col-"] {
+				width:100%
+			}
+		
+}
+.welcome {
+	position: relative;
+	z-index: 200;
+	background: #FFF;
+	padding: 48px 68px;
+	text-align: center;
+	-moz-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.25) inset;
+	-webkit-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.25) inset;
+	box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.25) inset;
+	margin-top: -138px;
+	z-index: 999;
+}
+.welcome-txt {
+	font-size: 14px;
+	color: #999999;
+	font-family: 'Open Sans', sans-serif;
+	line-height: 24px;
+	margin-bottom: 24px;
+	padding-top: 7px;
+}.main-title {
+	text-align: center;
+}
+h2.main-title, .pro-title h2 {
+	font-family: 'Roboto', sans-serif;
+	font-size: 26px;
+	font-weight: 400;
+	color: #e96f91;
+	text-transform: uppercase;
+	padding-left: 14px;
+	padding-right: 14px;
+	margin-bottom: 13px;
+}
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+  .dropbtn {padding-top: 15px;}
+  .dropbtn a {font-size: 18px;}
+  .dropdown-content {padding-top: 15px;}
+  .dropdown-content a {font-size: 18px;}
+
+}
+
+.dropbtn {
+    background-color: #111;
+    color: #818181;
+    padding: 8px;
+    border: none;
+    cursor: pointer;
+	font-size:25px;
+	margin-left:25px;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+.dropdown-content {
+	background-color: #111;
+    color: #818181;
+    display: none;
+    position: absolute;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+	margin-left:50px;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+	color: #818181;
+}
+
+.dropdown-content a:hover {
+	background-color: #111;
+	 color: #f1f1f1;
+	}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+     background-color: #111;
+	 color: #f1f1f1;
+}
+</style>
+ <script type="text/javascript">
+            var picPaths = ['packagehome/14.jpg','packagehome/15.jpg','packagehome/11.jpg','packagehome/12.jpg','packagehome/13.jpg'];
+            var curPic = -1;
+            //smooth animation
+            var imgO = new Array();
+            for(i=0; i < picPaths.length; i++) {
+                imgO[i] = new Image();
+                imgO[i].src = picPaths[i];
+            }
+
+            function swapImage() {
+                curPic = (++curPic > picPaths.length-1)? 0 : curPic;
+                imgCont.src = imgO[curPic].src;
+                setTimeout(swapImage,2000);
+            }
+
+            window.onload=function() {
+                imgCont = document.getElementById('imgBanner');
+                swapImage();
+            }
+        </script>
+</head>
+<body>
+
+
+<div id="main">
+<div id="header">
+<img src="sb_logo.png" style="height:10%;weight:100%;"><br>
+</div>
+<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
+
+<div class="slideshow-container">
+          
+		  <div>
+            <img id="imgBanner" src="" alt="" />
+           </div>
+
+		   
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+
+
+<div class="row">
+ <center>
+ <br/><br/> <br/><br/> <br/><br/><br/><br/>
+        <div class="col-lg-5">
+            <div class="welcome">
+			
+            <h2 class="main-title">Welcome To Sole Wedding</h2>
+            <p class="welcome-txt">It is a dream of every young girl to have a fairy tale Wedding. <br>
+            Sole Beauty makes sure it becomes a reality for you.<br>
+We provide many services for your wedding under one roof. We have more than 100 various designs of wedding jewelleries and other accessories to choose from. Traditional Kandyan/ Indian sarees, Indian/ Western dresses, Natural/ Artificial flower bouquets, hair dresses and other flower structures are to name a few of the many services we provide to make your wedding day wonderful and memorable. <br>
+At Sole Beauty, we are dedicated to make your dreams come true.</p>
+         <br/>
+        </div>
+		</center>
+      </div>
+ <div class="row">
+	<div class="col-6 menu ">
+	<br/>
+	<a  href="gal_1.html">
+	<img  target="_blank" src="ourproduct/3.jpg" style=" width:400px;height:250px" alt=" ">
+	<a/>
+	<h4 >Bridal Dressings</h4> 
+	<p>We specialize in bridal dressing, bridal make-up and hair. In a bridal dressing we focus to traditional Kandyan bride as well as Modern Kandyan bridal styles. </p>   
+	</div>
+<br/>
+	<a  href="about.html">
+	<img  target="_blank" src="ourproduct/aboutus.jpg" style=" width:400px;height:250px" alt=" ">
+	<a/>
+
+   <h4>About us</h4>
+    <p>We specialize in bridal dressing, bridal make-up and hair. In a bridal dressing we focus to traditional Kandyan bride as well as Modern Kandyan bridal styles. </p>   
+</div>   
+</div>
+</div>
+
+</div>
+  
+<br>
+<div id="footer" class="title title-1" style="color:white;margin-bottom:16px;background-color:black;">
+	<address style="margin-left:5%;">No : 123,<br>Passara road,<br> Badulla.<br>Tele : +94551234567<br>&nbsp &nbsp &nbsp &nbsp &nbsp +94559876544</address><br>
+	<span style="margin-left:5%;">&copy; Copyright 2017</span>
+	<span style="margin-left:65%;"><a href="http://www.facebook.com" target="_blank">
+	<img src="fb.png" style="width:10%;height:10%"></a>
+	<a href="http://www.twitter.com" target="_blank"><img src="twt.png" style="width:6%;height:6%;"></a></span><br><br>
+</div>
+
+
+</div>
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="hom_web.html">Home</a>
+<div class="dropdown">
+  <button class="dropbtn">Treatment</button>
+  <div class="dropdown-content">
+    <a href="massage.html">Body Massage</a>
+    <a href="nail_polish.html">Shellac Gel Manicure</a>
+    <a href="facial.html">Facial Treatment</a>
+	<a href="manicure.html">Manicure and Pedicure</a>
+	<a href="threading.html">Threading</a>
+	<a href="eyebrows.html">Lashes And Brows</a>
+</div>
+</div>
+<div class="dropdown">
+  <button class="dropbtn">Bridal Packages</button>
+  <div class="dropdown-content">
+    <a href="packagehome.html">Packages</a>
+    <a href="kandyan.html">Kandian</a>
+    <a href="western.html">Western</a>
+</div>
+</div>
+	<div class="dropdown">
+  <button class="dropbtn">Photo Gallery</button>
+  <div class="dropdown-content">
+    <a href="gal_1.html">Our Saloon</a>
+    <a href="inside_saloon.html">Bridal Dresses</a>
+    <a href="treatmentsphotos.html">Treatments</a>
+</div>
+</div>
+	<a href="shopping_page.html">Fashion Corner</a>
+	<a href="contact.html">Contact Us</a>
+	<a href="about.html">About Us</a>
+<a href="priv.html">Privacy And Policy</a>
+</div>
+<script>
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+    document.getElementById("main").style.marginLeft = "250px";
+    document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("main").style.marginLeft= "0";
+    document.body.style.backgroundColor = "white";
+}
+
+</script>
+     
+</body>
+</html> 

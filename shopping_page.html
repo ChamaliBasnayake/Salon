@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+ <style>
+div.polaroid
+		{
+			width:200px;
+			background-color:white;
+			box-shadow:0 4px 8px 0 rgba(0,0,0,0.2),
+			0 6px 20px 0 rgba(0,0,0,0.19);
+			margin-bottom:25px;
+			margin-left:60px;
+		}
+		div.container
+		{
+			padding:20px 60px;
+		}
+* {box-sizing:border-box}
+[class*="title"] {
+    float: left;
+    padding: 10px;
+}
+/* For mobile phones: */
+[class*="title"] {
+    width: 100%;
+	}
+@media only screen and (min-width: 600px) {
+    /* For tablets: */
+    .title {width: 25%;}
+	hr{
+		width:50%;
+		}
+
+}
+@media only screen and (min-width: 768px) {
+    /* For desktop: */
+    .title-1 {width: 100%;}
+	hr{
+		width:100%;
+		}
+}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1100px;
+  position: relative;
+  margin: auto;
+}
+
+body {
+    font-family: "Lato", sans-serif;
+    transition: background-color .5s;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+#main {
+    transition: margin-left .5s;
+    padding: 16px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+  .dropbtn {padding-top: 15px;}
+  .dropbtn a {font-size: 18px;}
+  .dropdown-content {padding-top: 15px;}
+  .dropdown-content a {font-size: 18px;}
+
+}
+
+.dropbtn {
+    background-color: #111;
+    color: #818181;
+    padding: 8px;
+    border: none;
+    cursor: pointer;
+	font-size:25px;
+	margin-left:25px;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+.dropdown-content {
+	background-color: #111;
+    color: #818181;
+    display: none;
+    position: absolute;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+	margin-left:50px;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+	color: #818181;
+}
+
+.dropdown-content a:hover {
+	background-color: #111;
+	 color: #f1f1f1;
+	}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+     background-color: #111;
+	 color: #f1f1f1;
+}
+.alert{
+    display: none;
+}
+</style>
+</head>
+<body>
+
+
+<div id="main">
+<div id="header">
+<img src="sb_logo.png" style="height:10%;weight:100%;"><br>
+</div>
+<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+<!--comment-->
+<div class="slideshow-container">
+<div id="top">
+		<h2 class="title title-1" style="color:Crimson;background-color:LightGrey; border-radius:5px;">Fashion Corner</h2>
+		<a class="title title-1" onclick="add()" target="_blank"><img src="cart_2.png" style="width:60px;height:50px;margin-left:1000px;"></a>
+		<hr>
+		<div class="alert alert-success alert-dismissable">
+		<button id="btn_2" type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+            Success! Item add successfully.
+        </div>
+	
+	</div>
+	<div id="main">
+		<div class="title title-1">
+		<h3>Neckless</h3> 
+		<div class="polaroid" style="float:left;">
+		<img src="n1.jpg" style="width:200px;height:150px">
+		<div class="container">
+		<p>Items  <select name=sel>
+						<option>1</option>
+						<option>2</option>
+						<option>3</option>
+					</select><br><br>
+					<p>Price : $10</p><br>
+				<button id="btn_1" type="button" class="btn btn-default">Add Item</button></p>
+		</div>
+		</div>
+		<div class="polaroid" style="float:left;">
+		<img src="n2.jpg" style="width:200px;height:150px">
+		<div class="container">
+		<p>Items  <select name=sel>
+						<option>1</option>
+						<option>2</option>
+						<option>3</option>
+					</select><br><br>
+					<p>Price : $10</p><br>
+				<button id="btn_1" type="button" class="btn btn-default">Add Item</button></p>
+		</div>
+		</div>
+		<div class="polaroid" style="float:left;">
+		<img src="n3.jpg" style="width:200px;height:150px">
+		<div class="container">
+		<p>Items  <select name=sel>
+						<option>1</option>
+						<option>2</option>
+						<option>3</option>
+					</select><br><br>
+					<p>Price : $10</p><br>
+				<button id="btn_1" type="button" class="btn btn-default">Add Item</button></p>
+		</div>
+		</div>
+		<div class="polaroid" style="float:left;">
+		<img src="n4.jpg" style="width:200px;height:150px">
+		<div class="container">
+		<p>Items  <select name=sel>
+						<option>1</option>
+						<option>2</option>
+						<option>3</option>
+					</select><br><br>
+					<p>Price : $10</p><br>
+				<button id="btn_1" type="button" class="btn btn-default">Add Item</button></p>
+		</div>
+		</div>
+		</div>
+		<div class="title title-1">
+		<h3>Bangles</h3>
+		<div class="polaroid" style="float:left;">
+		<img src="b1.jpg" style="width:200px;height:150px">
+		<div class="container">
+		<p>Items  <select name=sel>
+						<option>1</option>
+						<option>2</option>
+						<option>3</option>
+					</select><br><br>
+					<p>Price : $10</p><br>
+				<button id="btn_1" type="button" class="btn btn-default">Add Item</button></p>
+		</div>
+		</div>
+		<div class="polaroid" style="float:left;">
+		<img src="b2.jpg" style="width:200px;height:150px">
+		<div class="container">
+		<p>Items  <select name=sel>
+						<option>1</option>
+						<option>2</option>
+						<option>3</option>
+					</select><br><br>
+					<p>Price : $10</p><br>
+				<button id="btn_1" type="button" class="btn btn-default">Add Item</button></p>
+		</div>
+		</div>
+		<div class="polaroid" style="float:left;">
+		<img src="b3.jpg" style="width:200px;height:150px">
+		<div class="container">
+		<p>Items  <select name=sel>
+						<option>1</option>
+						<option>2</option>
+						<option>3</option>
+					</select><br><br>
+					<p>Price : $10</p><br>
+				<button id="btn_1" type="button" class="btn btn-default">Add Item</button></p>
+		</div>
+		</div>
+		<div class="polaroid" style="float:left;">
+		<img src="B-3.jpg" style="width:200px;height:150px">
+		<div class="container">
+		<p>Items  <select name=sel>
+						<option>1</option>
+						<option>2</option>
+						<option>3</option>
+					</select><br><br>
+					<p>Price : $10</p><br>
+				<button id="btn_1" type="button" class="btn btn-default">Add Item</button></p>
+		</div>
+		</div>
+		</div>
+		<div>
+		<h3 class="title title-1">Rings</h3>
+		<div class="polaroid" style="float:left;">
+		<img src="r1.jpg" style="width:200px;height:150px">
+		<div class="container">
+		<p>Items  <select name=sel>
+						<option>1</option>
+						<option>2</option>
+						<option>3</option>
+					</select><br><br>
+					<p>Price : $10</p><br>
+				<button id="btn_1" type="button" class="btn btn-default">Add Item</button></p>
+		</div>
+		</div>
+		<div class="polaroid" style="float:left;">
+		<img src="r2.jpg" style="width:200px;height:150px">
+		<div class="container">
+		<p>Items  <select name=sel>
+						<option>1</option>
+						<option>2</option>
+						<option>3</option>
+					</select><br><br>
+					<p>Price : $10</p><br>
+				<button id="btn_1" type="button" class="btn btn-default">Add Item</button></p>
+		</div>
+		</div>
+		<div class="polaroid" style="float:left;">
+		<img src="r3.jpg" style="width:200px;height:150px">
+		<div class="container">
+		<p>Items  <select name=sel>
+						<option>1</option>
+						<option>2</option>
+						<option>3</option>
+					</select><br><br>
+					<p>Price : $10</p><br>
+				<button id="btn_1" type="button" class="btn btn-default">Add Item</button></p>
+		</div>
+		</div>
+		<div class="polaroid" style="float:left;">
+		<img src="r4.jpg" style="width:200px;height:150px">
+		<div class="container">
+		<p>Items  <select name=sel>
+						<option>1</option>
+						<option>2</option>
+						<option>3</option>
+					</select><br><br>
+					<p>Price : $10</p><br>
+				<button id="btn_1" type="button" class="btn btn-default">Add Item</button></p>
+		</div>
+		</div>
+		</div>
+		<div>
+		<h4 class="title title-1">Head Band</h4>
+		<div class="polaroid" style="float:left;">
+		<img src="h1.jpg" style="width:200px;height:150px">
+		<div class="container">
+		<p>Items  <select name=sel>
+						<option>1</option>
+						<option>2</option>
+						<option>3</option>
+					</select><br><br>
+					<p>Price : $10</p><br>
+				<button id="btn_1" type="button" class="btn btn-default">Add Item</button></p>
+		</div>
+		</div>
+		<div class="polaroid" style="float:left;">
+		<img src="h2.jpg" style="width:200px;height:150px">
+		<div class="container">
+		<p>Items  <select name=sel>
+						<option>1</option>
+						<option>2</option>
+						<option>3</option>
+					</select><br><br>
+					<p>Price : $10</p><br>
+				<button id="btn_1" type="button" class="btn btn-default">Add Item</button></p>
+		</div>
+		</div>
+		<div class="polaroid" style="float:left;">
+		<img src="h3.jpg" style="width:200px;height:150px">
+		<div class="container">
+		<p>Items  <select name=sel>
+						<option>1</option>
+						<option>2</option>
+						<option>3</option>
+					</select><br><br>
+					<p>Price : $10</p><br>
+				<button id="btn_1" type="button" class="btn btn-default">Add Item</button></p>
+		</div>
+		</div>
+		<div class="polaroid" style="float:left;">
+		<img src="h4.jpg" style="width:200px;height:150px">
+		<div class="container">
+		<p>Items  <select name=sel>
+						<option>1</option>
+						<option>2</option>
+						<option>3</option>
+					</select><br><br>
+					<p>Price : $10</p><br>
+				<button id="btn_1" type="button" class="btn btn-default">Add Item</button></p>
+		</div>
+		</div>
+		</div>
+	</div>
+	<div class="title title-1" style="text-align:center;"><a href="shopping_page.html" style="text-decoration:none">1</a>	&nbsp		|	&nbsp	<a href="shop.html" style="text-decoration:none">2</a></div><br>
+
+	<br>
+
+</div>
+<div id="footer" class="title title-1" style="color:white;background-color:black;margin-bottom:16px; max-width: 3000px;">
+		<address style="margin-left:5%;">No : 123,<br>Passara road,<br> Badulla.<br>Tele : +94551234567<br>&nbsp &nbsp &nbsp &nbsp &nbsp +94559876544</address><br>
+		<span style="margin-left:5%;">&copy; Copyright 2017</span>
+		<span style="margin-left:65%;"><a href="http://www.facebook.com" target="_blank">
+		<img src="fb.png" style="width:10%;height:10%"></a>
+		<a href="http://www.twitter.com" target="_blank"><img src="twt.png" style="width:6%;height:6%;"></a>
+		</span>
+	</div>
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="hom_web.html">Home</a>
+<div class="dropdown">
+  <button class="dropbtn">Treatment</button>
+  <div class="dropdown-content">
+    <a href="massage.html">Body Massage</a>
+    <a href="nail_polish.html">Shellac Gel Manicure</a>
+    <a href="facial.html">Facial Treatment</a>
+	<a href="manicure.html">Manicure and Pedicure</a>
+	<a href="threading.html">Threading</a>
+	<a href="eyebrows.html">Lashes And Brows</a>
+</div>
+</div>
+<div class="dropdown">
+  <button class="dropbtn">Bridal Packages</button>
+  <div class="dropdown-content">
+    <a href="packagehome.html">Packages</a>
+    <a href="kandyan.html">Kandian</a>
+    <a href="western.html">Western</a>
+</div>
+</div>
+	<div class="dropdown">
+  <button class="dropbtn">Photo Gallery</button>
+  <div class="dropdown-content">
+    <a href="gal_1.html">Our Saloon</a>
+    <a href="inside_saloon.html">Bridal Dresses</a>
+    <a href="treatmentsphotos.html">Treatments</a>
+</div>
+</div>
+	<a href="shopping_page.html">Fashion Corner</a>
+	<a href="contact.html">Contact Us</a>
+	<a href="about.html">About Us</a>
+	<a href="priv.html">Privacy And Policy</a>
+</div>
+
+<script>
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+    document.getElementById("main").style.marginLeft = "250px";
+    document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("main").style.marginLeft= "0";
+    document.body.style.backgroundColor = "white";
+}
+
+$(document).ready(function(){
+    $('.btn').click(function(){
+        $('.alert').show();
+    }) 
+});
+$(document).ready(function(){
+    $('#btn_2').click(function(){
+        location.reload();
+    }) 
+});
+
+function add()
+{
+	alert("check_page");
+}	
+</script>
+     
+</body>
+</html> 

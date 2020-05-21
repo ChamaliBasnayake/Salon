@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {box-sizing:border-box}
+body {
+    font-family: "Lato", sans-serif;
+    transition: background-color .5s;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+#main {
+    transition: margin-left .5s;
+    padding: 16px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+.dropbtn {
+    background-color: #111;
+    color: #818181;
+    padding: 8px;
+    border: none;
+    cursor: pointer;
+	font-size:25px;
+	margin-left:25px;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+.dropdown-content {
+	background-color: #111;
+    color: #818181;
+    display: none;
+    position: absolute;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+	margin-left:50px;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+	color: #818181;
+}
+
+.dropdown-content a:hover {
+	background-color: #111;
+	 color: #f1f1f1;
+	}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+     background-color: #111;
+	 color: #f1f1f1;
+}
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial;
+}
+
+.header {
+    text-align: center;
+    padding: 32px;
+}
+
+/* Create two equal columns that floats next to each other */
+.column {
+    float: left;
+    width: 50%;
+    padding: 10px;
+}
+
+.column img {
+    margin-top: 12px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+</style>
+</head>
+<body>
+
+
+<div id="main">
+<div id="header">
+<img src="sb_logo.png" style="height:10%;weight:100%;"><br>
+</div>
+<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+<!--comment-->
+<div class="header">
+  <h1 style="Color:BlueViolet">Photo Gallery</h1>
+  <p>Click on the buttons to change the grid view.</p>
+  <button onclick="four()">4</button>
+  <button onclick="two()">2</button>
+  <button onclick="one()">1</button>
+</div>
+<!-- Photo Grid -->
+<div class="row"> 
+ 
+  <div class="column">
+  
+    <img src="13.jpg" style="width:100%">
+    <img src="40.jpg" style="width:100%"> 
+	<img src="41.jpg" style="width:100%"> 
+	<img src="42.jpg" style="width:100%"> 
+	<img src="43.jpg" style="width:100%"> 
+	<img src="44.jpg" style="width:100%"> 
+	<img src="45.jpg" style="width:100%"> 
+	<img src="46.jpg" style="width:100%"> 
+  </div>
+  <div class="column">
+    <img src="00.jpg" style="width:100%">
+    <img src="1.jpg" style="width:100%">
+    <img src="2.jpg" style="width:100%">
+    <img src="4.jpg" style="width:100%">
+    <img src="5.jpg" style="width:100%">
+    <img src="3.jpg" style="width:100%">
+    <img src="6.jpg" style="width:100%">
+	<img src="7.jpg" style="width:100%">
+    
+  </div>
+  <div class="column">
+  <img src="00.jpg" style="width:100%">
+    <img src="1.jpg" style="width:100%">
+    <img src="2.jpg" style="width:100%">
+    <img src="4.jpg" style="width:100%">
+    <img src="5.jpg" style="width:100%">
+    <img src="3.jpg" style="width:100%">
+    <img src="6.jpg" style="width:100%">
+    <img src="7.jpg" style="width:100%">  
+  </div>
+  <div class="column">
+  <img src="47.jpg" style="width:100%">
+    <img src="48.jpg" style="width:100%">
+    <img src="49.jpg" style="width:100%">
+    <img src="50.jpg" style="width:100%">
+    <img src="51.jpg" style="width:100%">
+    <img src="70.jpg" style="width:100%">
+    <img src="82.jpg" style="width:100%">
+    <img src="7.jpg" style="width:100%">  
+  </div>
+  
+</div>
+
+ <div id="footer" class="title title-1" style="color:white;margin-bottom:16px;background-color:black;">
+
+	<address style="margin-left:5%;">No : 123,<br>Passara road,<br> Badulla.<br>Tele : +94551234567<br>&nbsp &nbsp &nbsp &nbsp &nbsp +94559876544</address><br>
+	<span style="margin-left:5%;">&copy; Copyright 2017</span>
+	<span style="margin-left:65%;"><a href="http://www.facebook.com" target="_blank">
+	<img src="fb.png" style="width:10%;height:10%"></a>
+	<a href="http://www.twitter.com" target="_blank"><img src="twt.png" style="width:6%;height:6%;"></a></span><br><br>
+</div>
+<script>
+// Four images side by side
+function four() {
+    var elements = document.getElementsByClassName("column");
+    var i;
+    for (i = 0; i < elements.length; i++) {
+        elements[i].style.width = "25%";
+    }
+}
+
+// Two images side by side
+function two() {
+    var elements = document.getElementsByClassName("column");
+    var i;
+    for (i = 0; i < elements.length; i++) {
+        elements[i].style.width = "50%";
+    }
+}
+
+// Full-width images
+function one() {
+    var elements = document.getElementsByClassName("column");
+    var i;
+    for (i = 0; i < elements.length; i++) {
+        elements[i].style.width = "100%";
+    }
+}
+</script>
+<!--comment-->
+<div id="footer">
+</div>
+</div>
+
+</div>
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="hom_web.html">Home</a>
+<div class="dropdown">
+  <button class="dropbtn">Treatment</button>
+  <div class="dropdown-content">
+    <a href="massage.html">Body Massage</a>
+    <a href="nail_polish.html">Shellac Gel Manicure</a>
+    <a href="facial.html">Facial Treatment</a>
+	<a href="manicure.html">Manicure and Pedicure</a>
+	<a href="threading.html">Threading</a>
+	<a href="eyebrows.html">Lashes And Brows</a>
+</div>
+</div>
+<div class="dropdown">
+  <button class="dropbtn">Bridal Packages</button>
+  <div class="dropdown-content">
+    <a href="packagehome.html">Packages</a>
+    <a href="kandyan.html">Kandian</a>
+    <a href="western.html">Western</a>
+</div>
+</div>
+	<div class="dropdown">
+  <button class="dropbtn">Photo Gallery</button>
+  <div class="dropdown-content">
+    <a href="gal_1.html">Our Saloon</a>
+    <a href="inside_saloon.html">Bridal Dresses</a>
+    <a href="treatmentsphotos.html">Treatments</a>
+</div>
+</div>
+	<a href="shopping_page.html">Fashion Corner</a>
+	<a href="contact.html">Contact Us</a>
+	<a href="about.html">About Us</a>
+	<a href="priv.html">Privacy And Policy</a>
+</div>
+<script>
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+    document.getElementById("main").style.marginLeft = "250px";
+    document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("main").style.marginLeft= "0";
+    document.body.style.backgroundColor = "white";
+}
+</script>
+     
+</body>
+</html> 

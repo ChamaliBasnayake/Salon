@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {box-sizing:border-box}
+body {
+    font-family: "Lato", sans-serif;
+    transition: background-color .5s;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+#main {
+    transition: margin-left .5s;
+    padding: 16px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+.dropbtn {
+    background-color: #111;
+    color: #818181;
+    padding: 8px;
+    border: none;
+    cursor: pointer;
+	font-size:25px;
+	margin-left:25px;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+.dropdown-content {
+	background-color: #111;
+    color: #818181;
+    display: none;
+    position: absolute;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+	margin-left:50px;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+	color: #818181;
+}
+
+.dropdown-content a:hover {
+	background-color: #111;
+	 color: #f1f1f1;
+	}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+     background-color: #111;
+	 color: #f1f1f1;
+}
+</style>
+</head>
+<body>
+
+
+<div id="main">
+<div id="header">
+<img src="sb_logo.png" style="height:10%;weight:100%;"><br>
+</div>
+<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+<div id ="content">
+<img src="nails.png" alt="manicure" height="250px" width="1300px"  style="margin-left:20px;margin-right:10px; border-radius:5px;">
+
+<h3 style="color:Crimson;background-color:LightGrey; border-radius:5px;">Manicure & Pedicure</h3>
+<p>Having attractive nails on both hands and feet can boost any woman's confidence.</p>
+<p>To help you achieve this every day of the week, we offer a selection of manicures & pedicures to suit your daily needs.</p>
+<p>Take a pick from a quick file & polish nail treatment to Deluxe Manicure or Spa Pedicure selections.</p>
+<p>Our basic File & Polish is a quick but effective way to re-touch and keep your nails looking good for about 7 days. </p>
+<p>The Express Nail Treatments are perfect for those last minute emergency nail tidies, while Essential Nail Treatments for the full works. Moreover if you have a little more time in your hand and really want to spoil yourself then go for the Deluxe Treatments, which gives you extra massage and pampering both on hands and feet.</p>
+
+<h4><u><b>Sole Beauty manicures</b></u></h4>
+<p>Express Manicure:(Quick Manicure) - File, push back of cuticles, moisturising hand treatment and a varnish.</p>
+<p>Essential Manicure:(Full Manicure) - File, push back of cuticles, cuticle tidy, hand massage and varnish.</p>
+<p>Signature Manicure:(Deluxe Manicure) - File, push back of cuticles, cuticle tidy, hand exfoliation or hand mask, hand massage and hand soak.</p>
+
+<h4><u><b>Sole Beauty pedicures</b></u></h4>
+<p>Express Pedicure:(Quick Pedicure) - File, push back of cuticles, foot lotion and a varnish.</p>
+<p>Essential Pedicure:(Full Pedicure) - Foot soak, file, push back of cuticles, cuticle tidy, hard skin removal, foot exfoliation, foot massage and moisturiser.</p>
+<p>Perfect Pedicure:(Deluxe Pedicure) - Foot soak, file, push back of cuticles, cuticle tidy, hard skin removal, foot exfoliation, foot massage, revitalising foot mask and moisturiser.</p>
+
+<h3 style="color:Crimson;background-color:LightGrey; border-radius:5px;">Pre-care and After-care Advice and Guidance</h3>
+<h4><u><b>Manicures:</b></u></h4>
+<ul>
+<li>Make sure you reserve enough time for after the manicure, to allow your nail polish to dry before you leave the salon.</li>
+<li>We recommend using hand and cuticle cream everyday.</li>
+<li>If you want to change the polish yourself between visits, remember to use a clear polish or base coat to prevent discolouring the nail.</li>
+<li>Apply a top coat to protect, prolong and help prevent the chipping of the nail polish.</li>
+</ul>
+
+<h4><u><b>Pedicures:</b></u></h4>
+<ul>
+<li>Make sure you reserve enough time for after the pedicure, to allow the nail polish to dry before you leave the salon.</li>
+<li>We recommend that you bring flip flops with you, to protect from smudging or damage of the polish.</li>
+<li>Where possible, use a pumice stone in between appointments to avoid the build up of hard, dead skin.</li>
+<li>If you want to change the polish yourself between visits, remember to use a clear polish or base coat to prevent the  discoloration of the nail.</li>
+<li>To maintain hydrated and soft feet, moisturise them daily.</li>
+<li>To avoid dryness, exfoliate weekly.</li>
+</ul>
+
+<h3 style="color:Crimson;background-color:LightGrey; border-radius:5px;">Nail-on-Nail information</h3>
+<p>On top of their many purposes and services, the nails protect and sustain the tissues in our fingers and toes. They are made up of hardened skin cells consisting mainly of the protein keratin, which is also found in skin and hair.</p>
+<p>There are many nail disorders that are a result of improper and poor nail care. It is important to maintain good nail-care habits; Dermatologists recommend that nails are kept clean and dry in order to maintain healthy nails. The purpose of this is to keep bacteria from developing under the nail. Doctors will often look at nails to detect a connecting health condition such as liver or kidney diseases, anaemia, diabetes and even heart disease as they can portray serious health problems.</p>
+
+<h3 style="color:Crimson;background-color:LightGrey; border-radius:5px;">How can I uphold healthy nails?</h3>
+<p>Professional manicures or pedicures performed on a regular basis can be very helpful in maintaining the overall health of the nail. Manicures and pedicures not only enhance the beauty of your hands and feet, but they also assist in the prevention of hang nails, nail damage and reduce the chance of developing fragile tips, splits and cuts on the nails. Additionally, the massages provided with our Essential & Signature treatments may help improve the skins health by enhancing the blood circulation to the area; this discourages wrinkles developing on your hands and feet.</p>
+<p>So for Manicure & Pedicure that looks beautiful all year round, come to Sole Beauty!</p>
+</div> 
+<div id="footer">
+</div>
+</div>
+
+</div>
+<div id="footer" class="title title-1" style="color:white;background-color:black;margin-bottom:16px; max-width: 3000px;">
+		<address style="margin-left:5%;">No : 123,<br>Passara road,<br> Badulla.<br>Tele : +94551234567<br>&nbsp &nbsp &nbsp &nbsp &nbsp +94559876544</address><br>
+		<span style="margin-left:5%;">&copy; Copyright 2017</span>
+		<span style="margin-left:65%;"><a href="http://www.facebook.com" target="_blank">
+		<img src="fb.png" style="width:10%;height:10%"></a>
+		<a href="http://www.twitter.com" target="_blank"><img src="twt.png" style="width:6%;height:6%;"></a>
+		</span>
+	</div>
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="hom_web.html">Home</a>
+<div class="dropdown">
+  <button class="dropbtn">Treatment</button>
+  <div class="dropdown-content">
+    <a href="massage.html">Body Massage</a>
+    <a href="nail_polish.html">Shellac Gel Manicure</a>
+    <a href="facial.html">Facial Treatment</a>
+	<a href="manicure.html">Manicure and Pedicure</a>
+	<a href="threading.html">Threading</a>
+	<a href="eyebrows.html">Lashes And Brows</a>
+</div>
+</div>
+<div class="dropdown">
+  <button class="dropbtn">Bridal Packages</button>
+  <div class="dropdown-content">
+    <a href="packagehome.html">Packages</a>
+    <a href="kandyan.html">Kandian</a>
+    <a href="western.html">Western</a>
+</div>
+</div>
+	<div class="dropdown">
+  <button class="dropbtn">Photo Gallery</button>
+  <div class="dropdown-content">
+    <a href="gal_1.html">Our Saloon</a>
+    <a href="inside_saloon.html">Bridal Dresses</a>
+    <a href="treatmentsphotos.html">Treatments</a>
+</div>
+</div>
+	<a href="shopping_page.html">Fashion Corner</a>
+	<a href="contact.html">Contact Us</a>
+	<a href="about.html">About Us</a>
+	<a href="priv.html">Privacy And Policy</a>
+</div>
+<script>
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+    document.getElementById("main").style.marginLeft = "250px";
+    document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("main").style.marginLeft= "0";
+    document.body.style.backgroundColor = "white";
+}
+</script>
+     
+</body>
+</html> 

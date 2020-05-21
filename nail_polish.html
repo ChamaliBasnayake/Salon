@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {box-sizing:border-box}
+body {
+    font-family: "Lato", sans-serif;
+    transition: background-color .5s;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+#main {
+    transition: margin-left .5s;
+    padding: 16px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+.dropbtn {
+    background-color: #111;
+    color: #818181;
+    padding: 8px;
+    border: none;
+    cursor: pointer;
+	font-size:25px;
+	margin-left:25px;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+.dropdown-content {
+	background-color: #111;
+    color: #818181;
+    display: none;
+    position: absolute;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+	margin-left:50px;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+	color: #818181;
+}
+
+.dropdown-content a:hover {
+	background-color: #111;
+	 color: #f1f1f1;
+	}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+     background-color: #111;
+	 color: #f1f1f1;
+}
+</style>
+</head>
+<body>
+
+
+<div id="main">
+<div id="header">
+<img src="sb_logo.png" style="height:10%;weight:100%;"><br>
+</div>
+<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+<div id ="content">
+<img src="nailpolish.png" alt="nailpolish" height="250px" width="1300px"  style="margin-left:20px;margin-right:10px; border-radius:5px;">
+
+<h3 style="color:Crimson;background-color:LightGrey; border-radius:5px;">CND Shellac Gel Nail Polish</h3>
+<p>Having trouble fitting weekly manicure/pedicure regimes into your busy schedule? Want 2-3 weeks of “divine flawless nails" without the chipping, breaking, fading, and smudging associated with a basic manicure? Well, Sole Beauty is proud to introduce Shellac Gel Manicure by CND to our list of natural nail treatments.</p>
+<p>CND Shellac polish is a revolutionary nail treatment technique that cultivates and enhances natural nail care, by utilizing an ingenuity that provides nail growth protection. Shellac ceases the "Gel in a Bottle" concept and bestows an everlasting, immaculate finish that dries within seconds.</p>
+<p>With over 50 luxurious colours to choose from, Sole Beauty's Shellac Nail Treatment will "indulge your nails".</p>
+
+<h3 style="color:Crimson;background-color:LightGrey; border-radius:5px;">CND Shellac Manicures:</h3>
+<ul>
+<li>Shellac Polish: (Quick) - Includes nail shape, buff of nails, Shellac nail polish and ends with a moisturizing hand lotion.</li>
+<li>Shellac Treatment: (Classic) - Includes nail shape, cuticle care,  Shellac nail polish, and ends with hand massage. </li>
+<li>Shellac Deluxe: (Deluxe) - Includes nail shape, soak, cuticle care, Shellac nail polish,  hydrating hand mask, and ends with moistening hand lotion.</li>
+</ul>
+
+<h3 style="color:Crimson;background-color:LightGrey; border-radius:5px;">CND Shellac Pedicures:</h3>
+<ul>
+<li>Shellac Polish: (Quick) - Includes nail shape, buff of nails, Shellac nail polish and ends with a moisturizing foot lotion.</li>
+<li>Shellac Treatment: (Classic) - Includes foot soak, nail shape, cuticle care, hard skin removal, foot exfoliation, moisturizing foot lotion, foot massage, and ends with  Shellac nail polish.</li>
+<li>Shellac Deluxe: (Deluxe) - Includes  foot soak, nail shape, cuticle care, hard skin removal, foot exfoliation, revitalizing foot mask, moisturizing foot lotion, foot massage, and ends with  Shellac nail polish.</li>
+</ul>
+</div> 
+<div id="footer">
+</div>
+</div>
+
+</div>
+<div id="footer" class="title title-1" style="color:white;background-color:black;margin-bottom:16px; max-width: 3000px;">
+		<address style="margin-left:5%;">No : 123,<br>Passara road,<br> Badulla.<br>Tele : +94551234567<br>&nbsp &nbsp &nbsp &nbsp &nbsp +94559876544</address><br>
+		<span style="margin-left:5%;">&copy; Copyright 2017</span>
+		<span style="margin-left:65%;"><a href="http://www.facebook.com" target="_blank">
+		<img src="fb.png" style="width:10%;height:10%"></a>
+		<a href="http://www.twitter.com" target="_blank"><img src="twt.png" style="width:6%;height:6%;"></a>
+		</span>
+	</div>
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="hom_web.html">Home</a>
+<div class="dropdown">
+  <button class="dropbtn">Treatment</button>
+  <div class="dropdown-content">
+    <a href="massage.html">Body Massage</a>
+    <a href="nail_polish.html">Shellac Gel Manicure</a>
+    <a href="facial.html">Facial Treatment</a>
+	<a href="manicure.html">Manicure and Pedicure</a>
+	<a href="threading.html">Threading</a>
+	<a href="eyebrows.html">Lashes And Brows</a>
+</div>
+</div>
+<div class="dropdown">
+  <button class="dropbtn">Bridal Packages</button>
+  <div class="dropdown-content">
+    <a href="packagehome.html">Packages</a>
+    <a href="kandyan.html">Kandian</a>
+    <a href="western.html">Western</a>
+</div>
+</div>
+	<div class="dropdown">
+  <button class="dropbtn">Photo Gallery</button>
+  <div class="dropdown-content">
+    <a href="gal_1.html">Our Saloon</a>
+    <a href="inside_saloon.html">Bridal Dresses</a>
+    <a href="treatmentsphotos.html">Treatments</a>
+</div>
+</div>
+	<a href="shopping_page.html">Fashion Corner</a>
+	<a href="contact.html">Contact Us</a>
+	<a href="about.html">About Us</a>
+	<a href="priv.html">Privacy And Policy</a>
+</div>
+<script>
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+    document.getElementById("main").style.marginLeft = "250px";
+    document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("main").style.marginLeft= "0";
+    document.body.style.backgroundColor = "white";
+}
+</script>
+     
+</body>
+</html> 

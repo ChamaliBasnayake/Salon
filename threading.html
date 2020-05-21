@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {box-sizing:border-box}
+body {
+    font-family: "Lato", sans-serif;
+    transition: background-color .5s;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+#main {
+    transition: margin-left .5s;
+    padding: 16px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+.dropbtn {
+    background-color: #111;
+    color: #818181;
+    padding: 8px;
+    border: none;
+    cursor: pointer;
+	font-size:25px;
+	margin-left:25px;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+.dropdown-content {
+	background-color: #111;
+    color: #818181;
+    display: none;
+    position: absolute;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+	margin-left:50px;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+	color: #818181;
+}
+
+.dropdown-content a:hover {
+	background-color: #111;
+	 color: #f1f1f1;
+	}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+     background-color: #111;
+	 color: #f1f1f1;
+}
+</style>
+</head>
+<body>
+
+
+<div id="main">
+<div id="header">
+<img src="sb_logo.png" style="height:10%;weight:100%;"><br>
+</div>
+<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+<div id ="content">
+<img src="eyebrows.png" alt="threading" height="250px" width="1300px"  style="margin-left:20px;margin-right:10px; border-radius:5px;">
+
+<h3 style="color:Crimson;background-color:LightGrey; border-radius:5px;">Threading</h3>
+<p>Commonly practiced in Asian countries, threading has now become very popular here in the West due to its efficiecy and longer lasting effects.</p>
+<p>Known as Bande Abru ("Abru" means eyebrow, and "Bande" is the thread) in Persian culture, the process is extremely sanitary as nothing but the thread touches the skin and it uses no form of chemicals.</p>
+<p>Our therapist uses a thin cotton thread to twist through the unwanted hair which when pulled plucks the hair at the follicle level. This treatment will last up to 5 weeks. Rather than plucking individual hairs, entire rows of hair can be removed making the process much quicker!</p>
+
+<p><i><b>Best Areas for Threading:</b></i></p>
+<ul>
+<li>Upper Lip Threading: Removal of the hair from the upper lip area</li>
+<li>Chin/Neck Threading: Removal of the hair from the chin and neck</li>
+<li>Eyebrows Threading: Removal of the hair to create a neatened and well suited eyebrow shape for you</li>
+<li>Side of Face Threading: Removal of the hair along the side burn area</li>
+<li>Full Face Threading: Removal of all unwanted hair from the face</li>
+</ul>
+<p>As the hair is removed by the follicle it is a reasonably long-lasting hair removal technique. Repeat visits are usually after 3-4 weeks as a standard. For women who prefer a more natural beauty regimen threading is a popular choice as there is no use of chemicals (or other products at all!). If properly performed then threading will not harm the skin at all and should not leave the skin red or irritated for more than a few minutes after the session.</p>
+
+<p><i><b>Benefits of Threading vs Waxing</b></i></p>
+<ul>
+<li>Does not peel off a layer of skin</li>
+<li>Lengthens the time taken for hair to grow back</li>
+<li>Skin does not get as red and irritated</li>
+<li>Individual hairs can be pulled out</li>
+<li>The hair being removed does not need to be as long, but just above the skin</li>
+<li>No additional hair will be produced and existing hairs will not get stronger</li>
+<li>The finest hairs from the skin surface will be picked up</li>
+<li>Skin is left smooth</li>
+</ul>
+
+</div>
+<div id="footer">
+</div>
+</div>
+
+</div>
+<div id="footer" class="title title-1" style="color:white;background-color:black;margin-bottom:16px; max-width: 3000px;">
+		<address style="margin-left:5%;">No : 123,<br>Passara road,<br> Badulla.<br>Tele : +94551234567<br>&nbsp &nbsp &nbsp &nbsp &nbsp +94559876544</address><br>
+		<span style="margin-left:5%;">&copy; Copyright 2017</span>
+		<span style="margin-left:65%;"><a href="http://www.facebook.com" target="_blank">
+		<img src="fb.png" style="width:10%;height:10%"></a>
+		<a href="http://www.twitter.com" target="_blank"><img src="twt.png" style="width:6%;height:6%;"></a>
+		</span>
+	</div>
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="hom_web.html">Home</a>
+<div class="dropdown">
+  <button class="dropbtn">Treatment</button>
+  <div class="dropdown-content">
+    <a href="massage.html">Body Massage</a>
+    <a href="nail_polish.html">Shellac Gel Manicure</a>
+    <a href="facial.html">Facial Treatment</a>
+	<a href="manicure.html">Manicure and Pedicure</a>
+	<a href="threading.html">Threading</a>
+	<a href="eyebrows.html">Lashes And Brows</a>
+</div>
+</div>
+<div class="dropdown">
+  <button class="dropbtn">Bridal Packages</button>
+  <div class="dropdown-content">
+    <a href="packagehome.html">Packages</a>
+    <a href="kandyan.html">Kandian</a>
+    <a href="western.html">Western</a>
+</div>
+</div>
+	<div class="dropdown">
+  <button class="dropbtn">Photo Gallery</button>
+  <div class="dropdown-content">
+    <a href="gal_1.html">Our Saloon</a>
+    <a href="inside_saloon.html">Bridal Dresses</a>
+    <a href="treatmentsphotos.html">Treatments</a>
+</div>
+</div>
+	<a href="shopping_page.html">Fashion Corner</a>
+	<a href="contact.html">Contact Us</a>
+	<a href="about.html">About Us</a>
+	<a href="priv.html">Privacy And Policy</a>
+</div>
+
+<script>
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+    document.getElementById("main").style.marginLeft = "250px";
+    document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("main").style.marginLeft= "0";
+    document.body.style.backgroundColor = "white";
+}
+</script>
+     
+</body>
+</html> 
